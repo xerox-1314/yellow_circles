@@ -25,7 +25,7 @@ class YellowGeneration(QMainWindow):
         self.repaint()
 
     def draw_circle(self, qp):
-        qp.setBrush(QColor(255, 255, 0))
+        qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
         x = randint(1, self.width() - 1)
         y = randint(1, self.height() - 1)
         r = randint(1, min([self.height() - y, self.width() - x]))
