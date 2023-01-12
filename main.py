@@ -1,15 +1,15 @@
 import sys
+from ui_file import Ui_MainWindow
 
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
 from random import randint
 
 
-class YellowGeneration(QMainWindow):
+class YellowGeneration(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.setGeometry(300, 300, 800, 600)
         self.setWindowTitle('Git и желтые окружности')
         self.but.clicked.connect(self.paint)
